@@ -1,25 +1,26 @@
 {
-  "projects": [
+  "version": 2,
+  "builds": [
     {
-      "src": "./client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "src": "server.js",
+      "use": "@vercel/node" // Specify your backend framework
     },
     {
-      "src": "./server/index.js",
-      "use": "@vercel/node"
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build" // Change to your actual build directory if different
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.js"
+      "dest": "/server.js" // Points to your backend server file
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/index.html"
+      "dest": "/client/build/$1" // Serve static files from the client build directory
     }
   ]
 }
