@@ -40,7 +40,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/gas-data');
+        // Updated to use your deployed backend URL
+        const response = await axios.get('https://gmd-nine.vercel.app/api/gas-data');
         const { co2, so2, nox } = response.data;
         setData({ co2, so2, nox });
 
