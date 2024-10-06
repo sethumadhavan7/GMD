@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background: url('https://www.fajarmasmurni.com/public/assets/images/productnsolution/fajarmasmurni_solutions_06_Cement_Quarry.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  overflow-y: auto; /* Allow scrolling if needed */
+}
+
+.App-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.data-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.data-item {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.data-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.data-item p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.alert {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.alert-high {
+  color: red;
+}
+
+.alert-normal {
+  color: lightgreen;
+}
+
+.chart-container {
+  margin-top: 10px;
+  height: 150px; /* Adjusted for smaller graphs */
+  width: 100%; 
+  background-color: rgba(255, 255, 255, 0.1); /* Optional to create a visual separation */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .data-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-item {
+    width: 90%;
+  }
+}
