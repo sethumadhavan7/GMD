@@ -41,7 +41,7 @@ function App() {
     const fetchData = async () => {
       try {
         // Updated to use your deployed backend URL
-        const response = await axios.get('https://gmd-nine.vercel.app/api/gas-data');
+        const response = await axios.get('https://gmd-serverapi.vercel.app/api/gas-data');
         const { co2, so2, nox } = response.data;
         setData({ co2, so2, nox });
 
