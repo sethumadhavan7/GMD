@@ -3,24 +3,24 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node" // Specify your backend framework
+      "use": "@vercel/node" 
     },
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build" // Change to your actual build directory if different
+        "distDir": "build" 
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server.js" // Points to your backend server file
+      "dest": "/server.js" 
     },
     {
       "src": "/(.*)",
-      "dest": "/client/build/$1" // Serve static files from the client build directory
+      "dest": "/client/build/$1" 
     }
   ]
 }
