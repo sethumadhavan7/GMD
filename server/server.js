@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB connection string (updated)
+// MongoDB connection string (your original string)
 const mongoURI = 'mongodb+srv://sethu:1234@cluster0.dbntwx8.mongodb.net/gasmonitoring?retryWrites=true&w=majority&appName=Cluster0';
 
 // Connect to MongoDB Atlas
