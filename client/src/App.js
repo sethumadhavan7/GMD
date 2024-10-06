@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import {
   Chart as ChartJS,
-  CategoryScale, // Import category scale for the x-axis
-  LinearScale,   // Import linear scale for the y-axis
+  CategoryScale,
+  LinearScale,
   PointElement,
   LineElement,
   Title,
@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Updated to use your deployed backend URL
+        // Use your deployed backend URL
         const response = await axios.get('https://gmd-serverapi.vercel.app/api/gas-data');
         const { co2, so2, nox } = response.data;
         setData({ co2, so2, nox });
