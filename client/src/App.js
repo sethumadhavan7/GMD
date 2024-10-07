@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Use your deployed backend URL
+        // Update with Vercel backend URL
         const response = await axios.get('https://gmd-serverapi.vercel.app/api/gas-data');
         const { co2, so2, nox } = response.data;
         setData({ co2, so2, nox });
@@ -65,11 +65,11 @@ function App() {
 
   const generateChartData = (label, value) => {
     return {
-      labels: ['Time 1', 'Time 2', 'Time 3'], // Example time data
+      labels: ['Time 1', 'Time 2', 'Time 3'],
       datasets: [
         {
           label,
-          data: [value - 5, value, value + 3], // Example data for the graph
+          data: [value - 5, value, value + 3],
           fill: true,
           backgroundColor: 'rgba(75,192,192,0.2)',
           borderColor: 'rgba(75,192,192,1)',
