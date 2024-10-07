@@ -41,7 +41,6 @@ app.post('/api/gas-data', async (req, res) => {
     console.log('Received gas data:', gasData);
     res.status(200).send('Data received and stored');
   } catch (error) {
-    console.error('Error saving gas data:', error);
     res.status(500).send('Error saving data');
   }
 });
